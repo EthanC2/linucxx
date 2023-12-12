@@ -1,6 +1,6 @@
 # linucxx - a C++ library for everyday linux programming
 linucxx is a general-purpose, header-only alternative to the C++ standard template library (STL). Although the library is written in C++, it is written in a 
-no-nonsense C-style that aims to balance safety with top-level clarity, something the STL is notoriously bad about. Note that this project is under 
+no-nonsense C-style that aims to balance safety with simplicity and top-level clarity, something the STL is notoriously bad about. Note that this project is under 
 semi-active development. I contribute to it whenever I have a need that is not implemented in the C-standard library (or its GNU extensions) or I dislike 
 the C++ STL implementation (which I've found happening more and more frequently recently...).
 

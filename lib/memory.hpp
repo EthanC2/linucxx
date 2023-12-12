@@ -3,7 +3,7 @@
 namespace linucxx::memory
 {
     template <typename T>
-    OwnedPtr
+    struct OwnedPtr
     {
 	T* ptr;
 

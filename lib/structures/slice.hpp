@@ -1,5 +1,7 @@
 #pragma once
 
+#include <sys/types.h>
+
 namespace linucxx::structures
 {
     template <typename T>
