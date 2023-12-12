@@ -4,6 +4,8 @@ inherit from the abstract class `Range`. Ranges are typically used for indices (
 of structures are templated to function as general-purpose start and end structure. For example, the example ranges program uses a range 
 of the enum class `Day` (`InclusiveRange<Day>`) to define the weekdays. Note that unlike spans, ranges do not maintain a reference to a structure.
 
+Note to self: add specializations for floating-point types.
+
 ```cpp
 enum class Day
 {

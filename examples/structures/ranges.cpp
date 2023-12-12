@@ -16,7 +16,6 @@ enum class Day
 int main()
 {
     InclusiveRange<Day> weekdays(Day::Monday, Day::Friday);
-    Day day = Day::Friday;
 
     if (weekdays.contains(Day::Friday)) // true
     {
