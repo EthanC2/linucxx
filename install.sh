@@ -6,4 +6,4 @@ if [[ $(id -u) -ne 0 ]]; then
     exit 1
 fi
 
-cp -r ./include /usr/include/linucxx
+cp -r ./lib /usr/include/linucxx

@@ -58,7 +58,7 @@ namespace linucxx
     }
 
     template <typename TValue, typename TSize = size_t, unsigned int GrowthFactor = 2>
-    T& dynarr::append(const TValue& value)
+    void dynarr::append(const TValue& value)
     {
 	if (length >= capacity)
 	{
