@@ -4,15 +4,19 @@ set -e
 headers=$(find ../lib -type f)
 
 for header in ${headers[@]}; do
-    filename=${header#../lib/}
-    filename=${filename%.hpp}
+    file=${header#../lib/}
+    file=${file%.hpp}
 
-    if [[ ! -f "../examples/$filename.cpp" ]]; then
-	echo "[$filename] missing example"
+    if [[ ! -f "../examples/$file.cpp" ]]; then
+	echo "[$file] missing example"
     fi
 
-    if [[ ! -f "../docs/$filename.md" ]]; then
-	echo "[$filename] missing documentation"
+    if [[ ! -f "../docs/$file.md" ]]; then
+	echo "[$file] missing documentation"
+    fi
+
+    if [[ ! -f "../tests/$file.cpp" ]]; then
+	echo "[$file] missing tests"
     fi
 done
 
