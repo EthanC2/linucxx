@@ -8,10 +8,13 @@ namespace linucxx::structures
     struct Array
     {
 	TElement data[Capacity];
-	size_t length;
 	const size_t capacity;
+	size_t length;
 
 	Array();
+
+	template <typename... Elements>
+	Array(Elements... elements);
 
 	ssize_t append(const TElement& element);
 	TElement& operator[](size_t index);
@@ -24,6 +27,13 @@ namespace linucxx::structures
     }
 
     template <typename TElement, size_t Capacity>
+    template <typename... Elements>
+    Array<TElement,Capacity>::Array(Elements... elements): data({elements...}), capacity(Capacity)
+    {
+	this->length = sizeof...(Elements);
+    }
+
+    template <typename TElement, size_t Capacity>
     ssize_t Array<TElement,Capacity>::append(const TElement& element)
     {
 	if (length >= capacity)
@@ -32,7 +42,7 @@ namespace linucxx::structures
 	}
 
 	data[length] = element;
-	return length++;
+	return (ssize_t) length++;
     }
 
     template <typename TElement, size_t Capacity>
