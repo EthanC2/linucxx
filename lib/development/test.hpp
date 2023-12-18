@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdio.h>
+
 #define UNIT_TEST(function_invocation)															  \
     do																			  \
     {																			  \

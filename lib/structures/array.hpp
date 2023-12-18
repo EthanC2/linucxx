@@ -47,7 +47,7 @@ namespace linucxx::structures
 	{
 	    if (data[i] == element)
 	    {
-		return i;
+		return (ssize_t) i;
 	    }
 	}
 

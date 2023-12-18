@@ -7,10 +7,6 @@ for header in ${headers[@]}; do
     file=${header#../lib/}
     file=${file%.hpp}
 
-    if [[ ! -f "../examples/$file.cpp" ]]; then
-	echo "[$file] missing example"
-    fi
-
     if [[ ! -f "../docs/$file.md" ]]; then
 	echo "[$file] missing documentation"
     fi

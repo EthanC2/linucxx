@@ -21,3 +21,17 @@ enum class Day
 InclusiveRange<Day> weekdays(Day::Monday, Day::Friday);
 printf("Friday is a weekday?: %s\n", weekdays.contains(Day::Friday) ? "true" : "false"); // true
 ```
+
+## Method Range::contains()
+The `Range::contains()` method returns true if the range contains the given element.
+
+```cpp
+InclusiveRange range(1,10);
+bool within_range;
+
+within_range = range.contains(1);	    // true, lower bound
+within_range = range.contains(10);	    // true, upper bound
+within_range = range.contains(5);	    // true, between lower and upper bounds
+within_range = range.contains(0);	    // false, outside range
+within_range = range.contains(11);	    // false, outside range
+```
